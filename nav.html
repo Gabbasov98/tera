@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="color-scheme" content="light only">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/fancybox.css">
+    <link rel="stylesheet" href="css/nouislider.min.css">
+    <link rel="stylesheet" href="css/jquery.timepicker.css">
+    <link rel="stylesheet" href="css/air-datepicker.css">
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+    <title>Главная</title>
+</head>
+
+
+
+<style>
+    .wrapper a {
+        font-size: 30px;
+        text-transform: capitalize;
+    }
+
+    .wrapper button {
+        margin-bottom: 25px;
+        width: 300px;
+        height: 45px;
+    }
+</style>
+
+<body class="m-page">
+
+    <div class="wrapper" style="padding: 50px;">
+        <a href="index.html" style="display: block; margin-bottom: 20px;">
+            Главная
+        </a>
+        <a href="houses.html" style="display: block; margin-bottom: 20px;">
+            Новостройки
+        </a>
+        <a href="mortgage.html" style="display: block; margin-bottom: 20px;">
+            Ипотека
+        </a>
+        <button data-modal="reqModal" style="border: 2px solid #000;margin-bottom: 20px;">
+            Заявка на ипотеку
+        </button>
+        <a href="tour.html" style="display: block; margin-bottom: 20px;">
+            Экскурсии
+        </a>
+        <button data-modal="tourModal" style="border: 2px solid #000;margin-bottom: 20px;">
+            Заявка на экскурсию
+        </button>
+        <a href="for-business.html" style="display: block; margin-bottom: 20px;">
+            Помещения для бизнеса
+        </a>
+        <a href="about.html" style="display: block; margin-bottom: 20px;">
+            О компании
+        </a>
+        <a href="contacts.html" style="display: block; margin-bottom: 20px;">
+            Контакты
+        </a>
+        <a href="house.html" style="display: block; margin-bottom: 20px;">
+            Страница ЖК
+        </a>
+
+    </div>
+
+
+
+
+
+
+
+    <div class="modal" id="reqModal">
+        <div class="modal__bg modal-bg _close-modal"></div>
+        <div class="modal__dialog">
+            <div class="h3 extra-bold-text not-upper-text">
+                Подать онлайн-заявку на ипотеку
+            </div>
+            <div class="_mt12 _mt8-tablet">
+                <div class="text-m">
+                    Заполните поля и введите актуальный номер телефона — на него придёт код подтверждения. После чего мы сохраним вашу заявку и вы сможете продолжить заполнение в личном кабинете. 
+                    <br>
+                Если в процессе заполнения анкеты у вас появятся вопросы, <a href="" class="underline-text">ознакомьтесь с гидом</a>, где собрана вся необходимая информация по ипотеке.
+                </div>
+            </div>
+
+            <form action="" class="modal-form _mt64 _mt40-tablet">
+                <div class="modal-form__grid">
+                    <div class="modal-form__fields _full">
+                        <div class="fg">
+                            <label>
+                                <span class="text-xxxs">Проект</span>
+                            </label>
+                            <select>
+                                <option>Выберите ЖК</option>
+                                <option>Выберите ЖК</option>
+                                <option>Выберите ЖК</option>
+                            </select>
+                        </div>
+                        <div class="fg">
+                            <label>
+                                <span class="text-xxxs">Корпус</span>
+                            </label>
+                            <select>
+                                <option>Корпус 1</option>
+                                <option>Корпус 2</option>
+                                <option>Корпус 3</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="fg _full">
+                        <label>
+                            <span class="text-xxxs">Как вас зовут</span>
+                        </label>
+                        <input type="text">
+                    </div>
+                    <div class="fg">
+                        <label>
+                            <span class="text-xxxs">Дата рождения</span>
+                        </label>
+                        <input readonly type="text" placeholder="ДД-ММ-ГГГГ" class="date-input">
+                    </div>
+                    <div class="fg">
+                        <label>
+                            <span class="text-xxxs">Серия и номер паспорта</span>
+                        </label>
+                        <input type="text">
+                    </div>
+                    <div class="fg">
+                        <label>
+                            <span class="text-xxxs">Мобильный телефон</span>
+                        </label>
+                        <input type="tel" placeholder="+7 (---) --- -- --">
+                    </div>
+                    <div class="fg">
+                        <label>
+                            <span class="text-xxxs">Электронная почта</span>
+                        </label>
+                        <input type="email">
+                    </div>
+                    <div class="switch-group">
+                        <div class="switch-group__col">
+                            <div class="m-switch">
+                                <input type="checkbox">
+                                <label></label>
+                            </div>
+                        </div>
+                        <div class="switch-group__col2">
+                            <div class="text-s medium-text">
+                                Я гражданин РФ
+                            </div>
+                            <div class="text-xxs">
+                                Оформляем полис онлайн в процессе покупки. Без страхования ставка будет выше. <a href="" class="underline-text">Узнать больше о страховании жизни</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="switch-group">
+                        <div class="switch-group__col">
+                            <div class="m-switch">
+                                <input type="checkbox">
+                                <label></label>
+                            </div>
+                        </div>
+                        <div class="switch-group__col2">
+                            <div class="text-s medium-text">
+                                Использование материнского капитала
+                            </div>
+                            <div class="text-xxs">
+                                Он может быть использован на улучшение жилищных условий. <a href="" class="underline-text">Узнайте, как получить и использовать</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="_mt64 _mt40-tablet">
+                    <div class="m-check m-check--green">
+                        <input type="checkbox" checked>
+                        <label>
+                            <span class="text-xxs">
+                            Заполнение анкеты производится в личном кабинете сайта. Если  пользователь с указанными данными не найден в системе, то после  подтверждения вами номера телефона для вас будет создана учетная запись  на сайте. Нажимая кнопку «Оставить заявку», вы подтверждаете, что согласны с условиями <a href="">Согласия</a> на обработку персональных данных.
+                        </span>
+                        </label>
+                    </div>
+                </div>
+                <div class="_mt24 _mt16-tablet _flex">
+                    <button class="contacts-form__btn m-btn m-btn-green">
+                        <span>Оставить заявку на точный расчет</span>
+                        <img src="img/arrow.svg" alt="">
+                    </button>
+                </div>
+            </form>
+
+            <button class="close-btn _close-modal">
+                <img src="img/close.svg" alt="">
+            </button>
+        </div>
+    </div>
+
+    <div class="modal" id="tourModal">
+        <div class="modal__bg modal-bg _close-modal"></div>
+        <div class="modal__dialog">
+            <div class="h3 extra-bold-text not-upper-text">
+                Записаться на экскурсию в шоурум
+            </div>
+            <div class="_mt12 _mt8-tablet">
+                <div class="text-m">
+                    Введите свои контакты ниже и выберите удобное время — вы получите SMS <span class="_no-wrap">с подтверждением записи</span>
+                </div>
+            </div>
+
+            <form action="" class="modal-form _mt64 _mt40-tablet">
+                <div class="modal-form__grid">
+                    <div class="fg">
+                        <label>
+                            <span class="text-xxxs">Как вас зовут</span>
+                        </label>
+                        <input type="text">
+                    </div>
+                    <div class="fg">
+                        <label>
+                            <span class="text-xxxs">Проект</span>
+                        </label>
+                        <select>
+                            <option>Выберите ЖК</option>
+                            <option>Выберите ЖК</option>
+                            <option>Выберите ЖК</option>
+                        </select>
+                    </div>
+                    <div class="fg">
+                        <label>
+                            <span class="text-xxxs">Удобная для вас дата</span>
+                        </label>
+                        <input readonly type="text" placeholder="ДД-ММ-ГГГГ" class="date-input">
+                    </div>
+                    <div class="fg">
+                        <label>
+                            <span class="text-xxxs">Время экскурсии</span>
+                        </label>
+                        <input readonly type="text" placeholder="ЧЧ-ММ" class="timepicker">
+                    </div>
+                    <div class="fg">
+                        <label>
+                            <span class="text-xxxs">Мобильный телефон</span>
+                        </label>
+                        <input type="tel" placeholder="+7 (---) --- -- --">
+                    </div>
+                    <div class="fg">
+                        <label>
+                            <span class="text-xxxs">Электронная почта</span>
+                        </label>
+                        <input type="email">
+                    </div>
+                </div>
+                <div class="_mt64 _mt40-tablet">
+                    <div class="m-check m-check--green">
+                        <input type="checkbox" checked>
+                        <label>
+                            <span class="text-xxs">
+                            Данные формы обрабатываются на основании <a href="">пользовательского соглашения</a>. Нажимая кнопку «Оставить заявку», вы подтверждаете, что согласны с условиями <a
+                                href="">Согласия</a> на обработку персональных данных.
+                        </span>
+                        </label>
+                    </div>
+                </div>
+                <div class="_mt24 _mt16-tablet _flex">
+                    <button class="contacts-form__btn m-btn m-btn-green">
+                        <span>Оставить заявку экскурсию</span>
+                        <img src="img/arrow.svg" alt="">
+                    </button>
+                </div>
+            </form>
+
+            <button class="close-btn _close-modal">
+                <img src="img/close.svg" alt="">
+            </button>
+        </div>
+    </div>
+
+    <!--  -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.maskedinput.min.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/fancybox.umd.js"></script>
+    <script src="js/nouislider.min.js"></script>
+    <script src="js/jquery.timepicker.min.js"></script>
+    <script src="js/air-datepicker.js"></script>
+    <script src="js/main.min.js"></script>
+
+</body>
+
+</html>
