@@ -125,7 +125,7 @@
                     </div>
                     <div class="_mt64 _mt40-tablet">
                         <div class="m-calc">
-                            <iframe id="calculator-iframe" src="https://ipoteka.domclick.ru/calc-reg/calculator.html" frameborder="no" scrolling="no" width="100%" height="100%" allow="clipboard-write">
+                            <iframe id="calculator-iframe" src="https://ipoteka.domclick.ru/calc-reg/calculator.html?cost=14000000&dep=3500000&term=20" frameborder="no" scrolling="no" width="100%" height="100%" allow="clipboard-write">
                             </iframe>
                         </div>
 
@@ -615,12 +615,12 @@
             if (!iframe) {
                 return;
             }
-            // 🔐 желательно проверить origin
-            if (event.origin !== 'https://ipoteka.domclick.ru') return;
-
-            if (event.data?.type === 'resize') {
-                iframe.style.height = event.data.height + 'px';
-            }
+            // // 🔐 желательно проверить origin
+            // if (event.origin !== 'https://ipoteka.domclick.ru') return;
+            //
+            // if (event.data?.type === 'resize') {
+            //     iframe.style.height = event.data.height + 'px';
+            // }
         });
     </script>
     <script src="js/main.min.js"></script>
