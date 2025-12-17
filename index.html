@@ -1008,12 +1008,12 @@
             if (!iframe) {
                 return;
             }
-            // // 🔐 желательно проверить origin
-            // if (event.origin !== 'https://ipoteka.domclick.ru') return;
-            //
-            // if (event.data?.type === 'resize') {
-            //     iframe.style.height = event.data.height + 'px';
-            // }
+            // 🔐 желательно проверить origin
+            if (event.origin !== 'https://ipoteka.domclick.ru') return;
+
+            if (event.data?.type === 'resize') {
+                iframe.style.height = event.data.height + 'px';
+            }
         });
     </script>
     <script src="js/main.min.js"></script>
