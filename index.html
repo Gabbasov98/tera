@@ -598,23 +598,108 @@
                 <div class="container">
                     <div class="info-text">
                         <div class="h2">
-                            Подайте заявку на ипотеку
+                            Ипотечный калькулятор
                         </div>
                         <div class="_mt12 _mt8-tablet">
                             <div class="text-xl black-medium-text">
-                                Заполните анкету онлайн для нескольких банков и отслеживайте статус по каждому в личном кабинете. А перед этим можно посмотреть программы и подобрать подходящую.
+                                Введите стоимость, первоначальный взнос (₽) и срок. Ниже — сравнение по программам (аннуитет).
                             </div>
                         </div>
                     </div>
                     <div class="_mt64 _mt40-tablet">
                         <div class="m-calc">
-                            <iframe id="calculator-iframe" src="https://ipoteka.domclick.ru/calc-reg/calculator.html?cost=14000000&dep=3500000&term=20" frameborder="no" scrolling="no" width="100%" height="100%" allow="clipboard-write">
-                            </iframe>
+                            <div class="grid3 grid-tablet">
+                                <div class="m-calc__col card">
+                                    <div class="m-calc__fields">
+                                        <div class="fg">
+                                            <label for="price">
+                                                <span class="text-xxxs">
+                                Стоимость недвижимости (₽)
+                            </span>
+                                            </label>
+                                            <input id="price" class="input" inputmode="decimal" value="8 000 000" />
+                                        </div>
+
+                                        <div class="fg">
+                                            <label for="dp">
+                                                <span class="text-xxxs">
+                                Первоначальный взнос (₽)
+                            </span>
+                                            </label>
+                                            <input id="dp" class="input" inputmode="decimal" value="0" />
+                                            <div class="hint">Можно 0 ₽. Если ПВ больше стоимости, будет ограничен стоимостью.</div>
+                                        </div>
+
+                                        <div class="fg">
+                                            <label for="years">
+                                                <span class="text-xxxs">
+                                Срок ипотеки (лет)
+                            </span>
+                                            </label>
+                                            <input id="years" class="input" type="number" min="1" max="50" step="1" value="20" />
+                                        </div>
+                                    </div>
+
+
+                                    <div class="btnRow _mt24 grid2">
+                                        <button id="applyBtn" class="m-btn m-btn-green" type="button">
+                                            <span>Подать заявку</span>
+                                        </button>
+                                        <button id="resetBtn" class="m-btn m-btn-gray-outline" type="button">
+                                            <span>Сброс</span>
+                                        </button>
+                                    </div>
+
+                                    <div class="warn _mt16">
+                                        <div class="text-s">
+                                            Расчёт аннуитетный. Не учитывает страховки, комиссии, льготные периоды, досрочные платежи.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="m-calc__col2 card">
+                                    <div class="kpis">
+                                        <div class="kpi">
+                                            <div class="t text-m">Сумма кредита</div>
+                                            <div class="v h5" id="kLoan">—</div>
+                                        </div>
+                                        <div class="kpi">
+                                            <div class="t text-m">ПВ</div>
+                                            <div class="v h5" id="kDP">—</div>
+                                        </div>
+                                        <div class="kpi">
+                                            <div class="t text-m">Срок (мес.)</div>
+                                            <div class="v h5" id="kMonths">—</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="m-calc__table">
+                                        <table>
+                                            <thead>
+                                                <tr>
+                                                    <th style="width:34%;">Программа</th>
+                                                    <th style="width:12%;">Ставка</th>
+                                                    <th>Платёж/мес</th>
+                                                    <th>Переплата</th>
+                                                    <th>Всего выплат</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="tbody">
+                                                <tr>
+                                                    <td colspan="5" style="color: rgba(255,255,255,.65);">Введите данные.</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                    <div class="footerHint" id="tableHint"></div>
+                                </div>
+                            </div>
                         </div>
 
                     </div>
 
-                    <div class="_mt64 _mt40-tablet grid3 grid-tablet">
+                    <div style="display: none;" class="_mt64 _mt40-tablet grid3 grid-tablet">
                         <div class="req__col">
                             <div class="calc">
                                 <div class="fg">
@@ -1000,22 +1085,6 @@
     <script src="js/nouislider.min.js"></script>
     <script src="js/jquery.timepicker.min.js"></script>
     <script src="js/air-datepicker.js"></script>
-    <script src="https://ipoteka.domclick.ru/calc-reg/calculator-injector.js"></script>
-    <script>
-        const iframe = document.querySelector('.m-calc iframe');
-
-        window.addEventListener('message', function(event) {
-            if (!iframe) {
-                return;
-            }
-            // 🔐 желательно проверить origin
-            if (event.origin !== 'https://ipoteka.domclick.ru') return;
-
-            if (event.data?.type === 'resize') {
-                iframe.style.height = event.data.height + 'px';
-            }
-        });
-    </script>
     <script src="js/main.min.js"></script>
 
 </body>
